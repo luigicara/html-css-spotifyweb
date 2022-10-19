@@ -5,8 +5,11 @@
     box-sizing: border-box;
 }
 
-body {
+:root {
     font-family: 'Montserrat', sans-serif;
+    color: rgba(211, 211, 211, 0.5);
+    font-size: 11px;
+    font-weight: 600;
 }
 
 /* MAIN RULES */
@@ -19,8 +22,59 @@ body {
 #sidebar {
     width: 200px;
     height: calc(100vh - 100px);
-    /* DEBUG */
-    background-color: yellow;
+    background-color: black;
+}
+
+#sidebar > img, #playlist {
+    padding: 20px;
+}
+
+#sidebar > img {
+    height: 75px;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar nav ul li {
+    padding: 5px 20px;
+}
+
+#sidebar nav ul li:first-child {
+    border-left: 3px solid greenyellow;
+    padding: 5px 17px;
+}
+
+#sidebar nav ul li img {
+    height: 25px;
+    vertical-align: middle;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: rgba(211, 211, 211, 0.5)
+}
+
+#playlist {
+    overflow-y: auto;
+}
+
+#playlist > strong {
+    color: white;
+}
+
+#playlist li {
+    padding: 7px 0;
+}
+
+#new-playlist span {
+    vertical-align: middle;
+    font-size: 3rem;
+}
+
+#new-playlist a {
+    font-size: 1.2rem;
 }
 
 #main-content {

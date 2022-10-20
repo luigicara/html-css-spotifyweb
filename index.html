@@ -16,69 +16,97 @@
         <section id="top">
             <!-- SIDE BAR -->
             <section id="sidebar">
-                <!-- LOGO -->
-                <img src="img/logo.svg" alt="logo">
+                <div>
+                    <!-- LOGO -->
+                    <img class="phone logo" src="img/logo.svg" alt="logo">
 
-                <!-- NAVBAR -->
-                <nav>
-                    <ul>
-                        <li>
-                            <img src="img/home.svg" alt="">
-                            <a href="#">Home</a>
-                        </li>
-
-                        <li>
-                            <img src="img/search.svg" alt="">
-                            <a href="#">Cerca</a>
-                        </li>
-
-                        <li>
-                            <img src="img/libreria.svg" alt="">
-                            <a href="#">La tua libreria</a>
-                        </li>
-                    </ul>
-                </nav>
+                    <img class="logo" id="logo-small" src="img/logo-small.svg" alt="">
+                    
+                    <!-- NAVBAR -->
+                    <nav>
+                        <ul id="navbar">
+                            <li>
+                                <img src="img/home.svg" alt="">
+                                <a class="phone" href="#">Home</a>
+                            </li>
+                            
+                            <li>
+                                <img src="img/search.svg" alt="">
+                                <a class="phone" href="#">Cerca</a>
+                            </li>
+                            
+                            <li>
+                                <img src="img/libreria.svg" alt="">
+                                <a class="phone" href="#">La tua libreria</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
                 <!-- PLAYLIST -->
-                <ul id="playlist">
-                    <strong>PLAYLIST</strong>
+                <div class="phone" id="playlist">
+                    
+                    <ul>
+                        <strong>PLAYLIST</strong>
+                        
+                        <li id="new-playlist">
+                            <span>
+                                <i class="fa-solid fa-square-plus"></i>
+                            </span>
+                            
+                            <a href="#">Crea Playlist</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Nome Playlist</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- USER AND INSTALL -->
+                <div id="install">
+                    <div id="install-btn">
+                        <i class="fa-regular fa-circle-down"></i> &nbsp;
 
-                    <li id="new-playlist">
+                        <span class="phone">
+                            Installa App
+                        </span> 
+                    </div>
+
+                    <div id="user">
                         <span>
-                            <i class="fa-solid fa-square-plus"></i>
+                            <img src="img/profile.svg" alt="profile">
+                        </span> &nbsp;
+
+                        <span class="phone">
+                            John Doe
                         </span>
-
-                        <a href="#">Crea Playlist</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Nome Playlist</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </section>
 
             <!-- MAIN CONTENT -->
@@ -96,7 +124,7 @@
 
         <!-- PLAYER CONTROLS -->
         <section id="bottom">
-
+            
         </section>
     </main>
 </body>

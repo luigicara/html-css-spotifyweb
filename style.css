@@ -15,6 +15,7 @@
 /* MAIN RULES */
 
     /* TOP RULES  */
+    /* SIDEBAR RULES */
 #top {
     display: flex;
 }
@@ -23,30 +24,38 @@
     width: 200px;
     height: calc(100vh - 100px);
     background-color: black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#sidebar > img, #playlist {
+.logo, #playlist {
     padding: 20px;
 }
 
-#sidebar > img {
+.logo {
     height: 75px;
+}
+
+#logo-small {
+    display: none;
 }
 
 #sidebar ul {
     list-style: none;
 }
 
-#sidebar nav ul li {
+#navbar li {
     padding: 5px 20px;
 }
 
-#sidebar nav ul li:first-child {
+#navbar li:first-child {
     border-left: 3px solid greenyellow;
     padding: 5px 17px;
 }
 
-#sidebar nav ul li img {
+#navbar img {
     height: 25px;
     vertical-align: middle;
 }
@@ -58,9 +67,10 @@
 
 #playlist {
     overflow-y: auto;
+    height: 100%;
 }
 
-#playlist > strong {
+#playlist ul > strong {
     color: white;
 }
 
@@ -76,6 +86,42 @@
 #new-playlist a {
     font-size: 1.2rem;
 }
+
+#install {
+    padding: 5px 20px;
+}
+
+#install-btn {
+    border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+    padding-bottom: 10px;
+}
+
+#user {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    padding-top: 10px;
+}
+
+#user span:first-child {
+    display: inline-block;
+    position: relative;
+    height: 25px;
+    width:25px;
+    border-radius: 100%;
+    background-color: gray;
+    vertical-align: middle;
+}
+
+#user img {
+    height: 20px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+    /* MAIN-CONTENT RULES */
 
 #main-content {
     height: calc(100vh - 100px);
@@ -109,21 +155,148 @@
     /* BOTTOM RULES */
 #bottom {
     height: 100px;
-    background-color: red;
+    background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+#left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+#song-cover img {
+    padding: 10px;
+    height: 60px;
+}
+
+#interaction {
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+#song {
+    font-size: 1.2rem;
+    color: white;
+}
+
+#interaction span {
+    padding: 5px;
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+#media-controls {
+    min-width: 150px;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color:white;
+}
+
+#play-btn {
+    font-size: 3rem;
+}
+
+#media-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+    width: 100%;
+}
+
+.time {
+    min-width: 30px;
+    color: white;
+    font-weight: 700;
+}
+
+.passed {
+    text-align: end;
+}
+
+.time-bar {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(211, 211, 211, 0.11);
+}
+
+.progress {
+    width: 25%;
+    height: 3px;
+    background-color: rgba(211, 211, 211, 0.507);
+}
+
+#right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    gap: 5%;
+    min-width: 150px;
+    max-width: 250px;
+    padding: 10px;
+}
+
+.icons {
+    color: white;
+    font-size: 1.3rem;
+}
+
 
 /* PHONE VERSION */
 @media screen and (max-width: 480px) {
+    /* SIDEBAR RULES */
     #sidebar {
-        width: 75px;
+        width: 50px;
     }
 
+    .phone {
+        display: none;
+    }
+
+    #logo-small, #navbar li, #install {
+        padding: 5px 10px;
+        text-align: center;
+    }
+
+    #navbar li:first-child {
+        border-left: 0;
+        padding: 5px 10px;
+    }
+
+    #logo-small {
+        display: block;
+        height: 50px;
+        width: 50px;
+    }
+
+    #install-btn {
+        border-bottom: 0;
+        padding-left: 6px;
+    }
+
+    /* MAIN-CONTENT RULES */
     #main-content {
         /* DEBUG */
-        width: calc(100vw - 75px);
+        width: calc(100vw - 50px);
     }
 
     #premium {
-        left: 75px;
+        left: 50px;
     }
 }

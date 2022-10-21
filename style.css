@@ -47,6 +47,10 @@
     list-style: none;
 }
 
+#sidebar li:hover a {
+    color: white;
+}
+
 #navbar li {
     padding: 5px 20px;
 }
@@ -82,6 +86,11 @@
 #new-playlist span {
     vertical-align: middle;
     font-size: 3rem;
+    color: rgba(211, 211, 211, 0.5);
+}
+
+#new-playlist:hover span {
+    color: white;
 }
 
 #new-playlist a {
@@ -89,7 +98,7 @@
 }
 
 #install {
-    padding: 5px 20px;
+    padding: 15px 20px 5px 20px;
 }
 
 #install-btn {
@@ -137,6 +146,7 @@
     width: calc(100% - 200px);
     top: 0;
     left: 200px;
+    z-index: 2;
     background-color: rgb(0, 0, 0, 0.5);
     display: flex;
     justify-content: flex-end;
@@ -150,6 +160,12 @@
     padding: 1rem 3rem;
     margin-right: 2rem;
 }
+
+#upgrade:hover {
+    font-size: 1.1rem;
+    margin-right: 1.5rem;
+}
+
     /* WRAPPER RULES */
 #wrapper {
     width: 100%;
@@ -171,6 +187,10 @@
 #category a {
     text-decoration: none;
     color: rgba(211, 211, 211, 0.5);
+}
+
+#category li:hover a {
+    color: white;
 }
 
 .container {
@@ -202,8 +222,35 @@
     text-align: center;
 }
 
+figure {
+    position: relative;
+}
+
 figure img {
     width: 100%;
+    display: block;
+}
+
+.play-now {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-now i {
+    color: white;
+    font-size: 3rem;
+}
+
+figure:hover .play-now {
+    display: flex;
 }
 
 .popular img {
@@ -243,13 +290,22 @@ figure img {
     height: 60px;
 }
 
+#song {
+    font-size: 1.2rem;
+    color: white;
+}
+
+#artist:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 #interaction {
     padding: 5px;
     font-size: 1.5rem;
 }
 
-#song {
-    font-size: 1.2rem;
+#interaction span:hover {
     color: white;
 }
 
@@ -261,15 +317,16 @@ figure img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
     max-width: 400px;
     margin: 0 auto;
+    gap: 10px;
 }
 
 #media-controls {
     min-width: 150px;
     width: 100%;
     max-width: 200px;
+    min-height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -278,7 +335,11 @@ figure img {
 }
 
 #play-btn {
-    font-size: 3rem;
+    font-size: 2.1rem;
+}
+
+#play-btn:hover {
+    font-size: 2.3rem;
 }
 
 #media-bar {
@@ -309,6 +370,27 @@ figure img {
     width: 25%;
     height: 3px;
     background-color: rgba(211, 211, 211, 0.507);
+    position: relative;
+}
+
+.time-bar:hover .progress {
+    background-color: greenyellow;
+}
+
+.time-bar:hover .dot {
+    display: block;
+}
+
+.dot {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translatex(-50%) translateY(-50%);
+    height: 9px;
+    width: 9px;
+    background-color: rgb(183, 183, 183);
+    border-radius: 100%;
 }
 
 #right {

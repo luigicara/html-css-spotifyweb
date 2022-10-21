@@ -154,8 +154,6 @@
 #wrapper {
     width: 100%;
     background-color: #141922;
-    /* DEBUG */
-    min-height: 6000px;
 }
 
 
@@ -186,6 +184,13 @@
     margin: 3rem 0;
 }
 
+.subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(211, 211, 211, 0.5);
+    margin-top: 1rem;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -199,6 +204,10 @@
 
 figure img {
     width: 100%;
+}
+
+.popular img {
+    border-radius: 50%;
 }
 
 .song-title {
@@ -362,5 +371,22 @@ figure img {
     #premium {
         left: 50px;
         width: calc(100% - 50px);
+    }
+}
+
+/* DESKTOP VERSION */
+@media screen and (max-width:1000px) {
+    .row {
+        gap: 1rem 2%;
+    }
+
+    .card {
+        width: calc(94% / 4);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .card {
+        width: calc(95% / 2);
     }
 }
